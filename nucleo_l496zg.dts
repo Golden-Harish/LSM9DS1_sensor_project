@@ -1,0 +1,12 @@
+&i2c1 {
+    status = "okay";
+    clock-frequency = <I2C_BITRATE_STANDARD>;  // or other supported bitrate
+
+    lsm9ds1@6b {
+        compatible = "st,lsm9ds1";
+        reg = <0x6b>;
+        interrupt-gpios = <&gpioe 10 GPIO_ACTIVE_HIGH>;
+        label = "LSM9DS1";
+    };
+};
+
